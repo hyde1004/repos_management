@@ -2,9 +2,10 @@ import os
 import subprocess
 
 repo_names = [
+    # common
     ('syna-release', 'android/syna-release/root'),
     ('syna-release/application', 'android/syna-release/application'),
-    ('syna-release/boot', 'android/syna-release/boot'),
+    ('syna-release/boot', 'android/syna-release/boot/root'),
     ('syna-release/boot/preboot/prebuilts', 'android/syna-release/boot/preboot/prebuilts'),
     ('syna-release/build', 'android/syna-release/build'),
     ('syna-release/configs', 'android/syna-release/configs'),
@@ -65,12 +66,13 @@ try:
         os.chdir(tch_repo)
 
         cmd = 'git branch -a'
-        print('cmd: %s\n' % cmd)
+        print('cmd: %s' % cmd)
         subprocess.check_call(cmd.split(' '))
 
         print('\n')
+
         cmd = 'git tag'
-        print('cmd: %s\n' % cmd)
+        print('cmd: %s' % cmd)
         subprocess.check_call(cmd.split(' '))
 
 
