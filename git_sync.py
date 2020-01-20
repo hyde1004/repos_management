@@ -53,10 +53,10 @@ repo_names = [
     ('android/vendor/synaptics/widevine', 'android/aosp_mirror/platform/vendor/synaptics/widevine'),
 
     # OT
-    ('android/device/synaptics/CJHello', 'android/aosp_mirror/device/synaptics/amber'),
-    ('android/device/synaptics/CJHello-kernel', 'android/aosp_mirror/device/synaptics/amber-kernel'),
-    ('android/vendor/synaptics/CJHello', 'android/aosp_mirror/platform/vendor/synaptics/amber'),
-    ('syna-release/cust/CJHello', 'android/syna-release/cust/amber'),
+    ('android/device/synaptics/amber', 'android/aosp_mirror/device/synaptics/amber'),
+    ('android/device/synaptics/amber-kernel', 'android/aosp_mirror/device/synaptics/amber-kernel'),
+    ('android/vendor/synaptics/amber', 'android/aosp_mirror/platform/vendor/synaptics/amber'),
+    ('syna-release/cust/amber', 'android/syna-release/cust/amber'),
 ]
 try:
     for (syn_path, tch_repo) in repo_names:
