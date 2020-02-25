@@ -3,7 +3,7 @@ import subprocess
 
 repo_names = [
     # common
-#    ('syna-release', 'android/syna-release/root'),
+    ('syna-release', 'android/syna-release/root'),
     ('syna-release/application', 'android/syna-release/application'),
     ('syna-release/boot', 'android/syna-release/boot/root'),
     ('syna-release/boot/preboot/prebuilts', 'android/syna-release/boot/preboot/prebuilts'),
@@ -67,22 +67,22 @@ try:
         root_pwd = os.getcwd()
         os.chdir(syn_path)
 
-        cmd = 'git remote add gitolite git@gitolite.bundang.ap.thmulti.com:/' + tch_repo +'.git'
-        print('cmd: %s' % cmd)
+    #    cmd = 'git remote add gitolite git@gitolite.bundang.ap.thmulti.com:/' + tch_repo +'.git'
+    #    print('cmd: %s' % cmd)
         #subprocess.check_call(cmd.split(' ')) # Need to Check result
-        subprocess.call(cmd.split(' ')) # Don't need to check result
+    #    subprocess.call(cmd.split(' ')) # Don't need to check result
 
-        cmd = 'git checkout amber/bg5ct/AndroidQ/20200119/202001171017/SDK'
+        cmd = 'git checkout amber/bg5ct/AndroidQ/20200224/20200224/SDK'
         print('cmd: %s' % cmd)
         subprocess.check_call(cmd.split(' ')) # Need to Check result
         #subprocess.call(cmd.split(' ')) # Don't need to check result 
 
-        cmd = 'git push gitolite amber/bg5ct/AndroidQ/20200119/202001171017/SDK:tch/synaptics-sdk/amber_bg5ct_AndroidQ_20200119_202001171017_SDK' # option : --dry-run
+        cmd = 'git push gitolite amber/bg5ct/AndroidQ/20200224/20200224/SDK:tch/synaptics-sdk/amber_bg5ct_AndroidQ_20200224_20200224_SDK' # option : --dry-run
         print('cmd: %s' % cmd)
         subprocess.check_call(cmd.split(' ')) # Need to Check result
         #subprocess.call(cmd.split(' ')) # Don't need to check result 
 
-        cmd = 'git push gitolite amber_bg5ct_AndroidQ_20200119_SDK_Release' # option : --dry-run 
+        cmd = 'git push gitolite amber_bg5ct_AndroidQ_20200224_SDK_Release' # option : --dry-run 
         print('cmd: %s' % cmd)
         subprocess.check_call(cmd.split(' ')) # Need to Check result
         #subprocess.call(cmd.split(' ')) # Don't need to check result 
