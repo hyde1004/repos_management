@@ -41,11 +41,11 @@ repo_names = [
     # IP
     ('syna-release/ampsdk/amp/src/ddl/acodec/codec/codec_mpeg', 'android/syna-release/ampsdk/amp/src/ddl/acodec/codec/codec_mpeg'),
     ('syna-release/drm/pr_syna_ca', 'android/syna-release/drm/pr_syna_ca/root'),
-    ('syna-release/drm/pr_syna_ca/3x', 'android/syna-release/drm/pr_syna_ca/3x'),
+    ('syna-release/drm/pr_syna_ca/4x', 'android/syna-release/drm/pr_syna_ca/4x'),
     ('syna-release/ampsdk/drm/widevine', 'android/syna-release/ampsdk/drm/widevine'),
     ('syna-release/fw_enc/mp3', 'android/syna-release/fw_enc/mp3'),
     ('syna-release/fw_enc/ms11', 'android/syna-release/fw_enc/ms11'),
-    ('syna-release/ta_enc/pr32', 'android/syna-release/ta_enc/pr32'),
+    ('syna-release/ta_enc/pr40', 'android/syna-release/ta_enc/pr40'),
     ('syna-release/ta_enc/wv15', 'android/syna-release/ta_enc/wv15'),
     ('syna-release/ta_enc/libwatermark.ta', 'android/syna-release/ta_enc/libwatermark.ta'),
     ('syna-release/ta_enc/libutctl.ta', 'android/syna-release/ta_enc/libutctl.ta'),
