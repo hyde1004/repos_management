@@ -22,7 +22,7 @@ repo_names = [
     ('syna-release/toolchain', 'android/syna-release/toolchain'),
     ('syna-release/fw_enc', 'android/syna-release/fw_enc'),
     ('syna-release/ta_enc', 'android/syna-release/ta_enc/root'),
-#    ('syna-release/ampsdk', 'android/syna-release/ampsdk/root'),
+    ('syna-release/ampsdk', 'android/syna-release/ampsdk/root'),
     ('syna-release/osal', 'android/syna-release/osal'),
     ('android/vendor/imagination', 'android/aosp_mirror/platform/vendor/imagination'),
     ('android/vendor/marvell', 'android/aosp_mirror/platform/vendor/marvell'),
@@ -36,23 +36,27 @@ repo_names = [
     ('android/device/synaptics/dolphin-kernel', 'android/aosp_mirror/device/synaptics/dolphin-kernel'),
     ('android/vendor/synaptics/dolphin', 'android/aosp_mirror/platform/vendor/synaptics/dolphin'),
     ('android/vendor/vsi', 'android/aosp_mirror/platform/vendor/vsi'),
+    ('android/vendor/realtek', 'android/aosp_mirror/platform/vendor/realtek'),
 
     # IP
-    #('syna-release/ampsdk/amp/src/ddl/acodec/codec/codec_mpeg', 'android/syna-release/ampsdk/amp/src/ddl/acodec/codec/codec_mpeg'),
-    #('syna-release/fw_enc/mp3', 'android/syna-release/fw_enc/mp3'),
+    ###('syna-release/ampsdk/amp/src/ddl/acodec/codec/codec_mpeg', 'android/syna-release/ampsdk/amp/src/ddl/acodec/codec/codec_mpeg'),
+    ###('syna-release/fw_enc/mp3', 'android/syna-release/fw_enc/mp3'),
     ('syna-release/ta_enc/libwatermark.ta', 'android/syna-release/ta_enc/libwatermark.ta'),
-	('android/vendor/synaptics/netflix', 'android/aosp_mirror/platform/vendor/synaptics/netflix'),
-	('syna-release/ampsdk/amp/src/ddl/acodec/codec/codec_wma', 'android/syna-release/ampsdk/amp/src/ddl/acodec/codec/codec_wma'),
-	('syna-release/ta_enc/libwma.ta', 'android/syna-release/ta_enc/libwma.ta'),
-	('android/vendor/synaptics/playready', 'android/aosp_mirror/platform/vendor/synaptics/playready'),
-	('android/vendor/synaptics/widevine', 'android/aosp_mirror/platform/vendor/synaptics/widevine'),
-	('syna-release/ampsdk/drm/widevine', 'android/syna-release/ampsdk/drm/widevine'),
-	('syna-release/drm/pr_syna_ca', 'android/syna-release/drm/pr_syna_ca/root'),
-	('syna-release/drm/pr_syna_ca/4x', 'android/syna-release/drm/pr_syna_ca/4x'),
-	('syna-release/ta_enc/pr40', 'android/syna-release/ta_enc/pr40'),
-	('syna-release/ta_enc/wv15', 'android/syna-release/ta_enc/wv15'),
-#new	('android/vendor/synaptics/amplitude', 'android/aosp_mirror/platform/vendor/synaptics/amplitude'),
-#new	('syna-release/ampsdk/amp/src/ddl/comp_aout/Dolby_DCV', 'android/syna-release/ampsdk/amp/src/ddl/comp_aout/Dolby_DCV'),
+    ('android/vendor/synaptics/netflix', 'android/aosp_mirror/platform/vendor/synaptics/netflix'),
+    ('syna-release/ampsdk/amp/src/ddl/acodec/codec/codec_wma', 'android/syna-release/ampsdk/amp/src/ddl/acodec/codec/codec_wma'),
+    ('syna-release/ta_enc/libwma.ta', 'android/syna-release/ta_enc/libwma.ta'),
+    ('android/vendor/synaptics/playready', 'android/aosp_mirror/platform/vendor/synaptics/playready'),
+    ('android/vendor/synaptics/widevine', 'android/aosp_mirror/platform/vendor/synaptics/widevine'),
+    ('syna-release/ampsdk/drm/widevine', 'android/syna-release/ampsdk/drm/widevine'),
+    ('syna-release/drm/pr_syna_ca', 'android/syna-release/drm/pr_syna_ca/root'),
+    ('syna-release/drm/pr_syna_ca/4x', 'android/syna-release/drm/pr_syna_ca/4x'),
+    ('syna-release/ta_enc/pr40', 'android/syna-release/ta_enc/pr40'),
+    ('syna-release/ta_enc/wv15', 'android/syna-release/ta_enc/wv15'),
+    ('android/vendor/synaptics/amplitude', 'android/aosp_mirror/platform/vendor/synaptics/amplitude'),
+    ('syna-release/ampsdk/amp/src/ddl/comp_aout/Dolby_DCV', 'android/syna-release/ampsdk/amp/src/ddl/comp_aout/Dolby_DCV'),
+    ('syna-release/ampsdk/amp/src/ddl/acodec/codec/db_ms12', 'android/syna-release/ampsdk/amp/src/ddl/acodec/codec/db_ms12'),
+    ('syna-release/ampsdk/build/configs/libdolbyms12', 'android/syna-release/ampsdk/build/configs/libdolbyms12'),
+    ('syna-release/fw_enc/ms12', 'android/syna-release/fw_enc/ms12'),
 
     # OT
     ('android/device/synaptics/igarnet', 'android/aosp_mirror/device/synaptics/igarnet'),
@@ -62,20 +66,20 @@ repo_names = [
 	
 ]
 
-LOCAL_BRANCH = 'igarnet/vs680/AndroidQ/20200515/202005111414/SDK'
+LOCAL_BRANCH = 'igarnet/vs680/AndroidQ/20200605/202006051100/SDK'
 #SYNA_BRANCH = 'debugithub/' + LOCAL_BRANCH
 #TCH_BRANCH = 'synaptics/' + LOCAL_BRANCH
-TCH_BRANCH = 'tch/synaptics-sdk/igarnet_vs680_AndroidQ_20200515_202005111414_SDK'
+TCH_BRANCH = 'tch/synaptics-sdk/igarnet_vs680_AndroidQ_20200605_202006051100_SDK'
 
-TAG = 'igarnet_20200515_SDK_Release'
-DO_DRY_RUN = True
+TAG = 'igarnet_20200605_SDK_Release'
+DO_DRY_RUN = False
 
 try:
-	dry_run = ' --dry-run' if DO_DRY_RUN else ''
-		
+    dry_run = ' --dry-run' if DO_DRY_RUN else ''
+
     for (syn_path, tch_repo) in repo_names:
-		index = repo_names.index((syn_path, tch_repo))
-        print('##### repo name : %s [%d/%d]' % (syn_path, index + 1, len(repo_names))
+        index = repo_names.index((syn_path, tch_repo))
+        print('##### repo name : %s [%d/%d]' % (syn_path, index + 1, len(repo_names)))
 
         root_pwd = os.getcwd()
         os.chdir(syn_path)
@@ -94,16 +98,16 @@ try:
 
         # push branch
         #cmd = "git push gitolite " + LOCAL_BRANCH +":" + TCH_BRANCH #+ " --dry-run" 
-        cmd = "git push gitolite " " :" + TCH_BRANCH + dry_run 
-        print('cmd: %s' % cmd)
-        #subprocess.check_call(cmd.split(' ')) # Need to Check result
-        subprocess.call(cmd.split(' ')) # Don't need to check result 
-
-        # push tag
-        cmd = "git push gitolite  :" + TAG + dry_run 
+        cmd = "git push gitolite " + LOCAL_BRANCH + ":" + TCH_BRANCH + dry_run 
         print('cmd: %s' % cmd)
         subprocess.check_call(cmd.split(' ')) # Need to Check result
         #subprocess.call(cmd.split(' ')) # Don't need to check result 
+
+        # push tag
+        cmd = "git push gitolite " + TAG + dry_run 
+        print('cmd: %s' % cmd)
+        #subprocess.check_call(cmd.split(' ')) # Need to Check result
+        subprocess.call(cmd.split(' ')) # Don't need to check result 
 
         #cmd = 'git push gitolite amber_bg5ct_AndroidQ_20200224_SDK_Release' # option : --dry-run 
         #print('cmd: %s' % cmd)
