@@ -56,10 +56,14 @@ LOCAL_BRANCH = 'igarnet/vs680/AndroidQ/20200515/202005111414/SDK'
 TCH_BRANCH = 'tch/synaptics-sdk/igarnet_vs680_AndroidQ_20200515_202005111414_SDK'
 
 TAG = 'igarnet_20200515_SDK_Release'
+DO_DRY_RUN = False
 
 try:
+    dry_run = ' --dry-run' if DO_DRY_RUN else ''
+
     for (syn_path, tch_repo) in repo_names:
-        print('##### repo name : %s' % (syn_path))
+        index = repo_names.index((syn_path, tch_repo))
+        print('##### repo name : %s [%d/%d]' % (syn_path, index + 1, len(repo_names)))
 
         root_pwd = os.getcwd()
         os.chdir(syn_path)
@@ -77,13 +81,14 @@ try:
         subprocess.call(cmd.split(' ')) # Don't need to check result
 
         # push branch
-        cmd = "git push gitolite " + LOCAL_BRANCH +":" + TCH_BRANCH #+ " --dry-run" 
+        #cmd = "git push gitolite " + LOCAL_BRANCH +":" + TCH_BRANCH #+ " --dry-run" 
+        cmd = "git push gitolite " + LOCAL_BRANCH + ":" + TCH_BRANCH + dry_run 
         print('cmd: %s' % cmd)
         #subprocess.check_call(cmd.split(' ')) # Need to Check result
         subprocess.call(cmd.split(' ')) # Don't need to check result 
 
         # push tag
-        cmd = "git push gitolite " + TAG #+ " --dry-run"
+        cmd = "git push gitolite " + TAG + dry_run 
         print('cmd: %s' % cmd)
         subprocess.check_call(cmd.split(' ')) # Need to Check result
         #subprocess.call(cmd.split(' ')) # Don't need to check result 
