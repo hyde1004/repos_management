@@ -62,10 +62,10 @@ repo_names = [
 
 ]
 
-LOCAL_BRANCH = 'amber/bg5ct/AndroidQ/20200624/202006201525/MDK'
+LOCAL_BRANCH = 'amber/bg5ct/AndroidQ/20200623/202006201525/MDK'
 #SYNA_BRANCH = 'debugithub/' + LOCAL_BRANCH
 #TCH_BRANCH = 'synaptics/' + LOCAL_BRANCH
-TCH_BRANCH = 'tch/synaptics-sdk/amber_bg5ct_AndroidQ_20200624_202006201525_MDK'
+TCH_BRANCH = 'tch/synaptics-sdk/amber_bg5ct_AndroidQ_20200623_202006201525_MDK'
 
 TAG = 'amber_bg5ct_AndroidQ_20200625_MDK_Release'
 DO_DRY_RUN = False
@@ -99,10 +99,23 @@ try:
         #subprocess.check_call(cmd.split(' ')) # Need to Check result
         subprocess.call(cmd.split(' ')) # Don't need to check result 
 
-        # push tag
-        cmd = "git push gitolite " + TAG + dry_run 
+        # delete branch
+        #cmd = "git push gitolite " + LOCAL_BRANCH +":" + TCH_BRANCH #+ " --dry-run" 
+        cmd = "git branch -d amber/bg5ct/AndroidQ/20200624/202006201525/MDK"
         print('cmd: %s' % cmd)
-        subprocess.check_call(cmd.split(' ')) # Need to Check result
+        #subprocess.check_call(cmd.split(' ')) # Need to Check result
+        subprocess.call(cmd.split(' ')) # Don't need to check result 
+
+        # delete remote branch
+        #cmd = "git push gitolite " + LOCAL_BRANCH +":" + TCH_BRANCH #+ " --dry-run" 
+        cmd = "git push gitolite :tch/synaptics-sdk/amber_bg5ct_AndroidQ_20200624_202006201525_MDK"
+        print('cmd: %s' % cmd)
+        #subprocess.check_call(cmd.split(' ')) # Need to Check result
+        subprocess.call(cmd.split(' ')) # Don't need to check result 
+        # push tag
+#        cmd = "git push gitolite " + TAG + dry_run 
+#        print('cmd: %s' % cmd)
+#        subprocess.check_call(cmd.split(' ')) # Need to Check result
         #subprocess.call(cmd.split(' ')) # Don't need to check result 
 
         #cmd = 'git push gitolite amber_bg5ct_AndroidQ_20200224_SDK_Release' # option : --dry-run 
