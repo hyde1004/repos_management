@@ -66,12 +66,12 @@ repo_names = [
 	
 ]
 
-LOCAL_BRANCH = 'igarnet/vs680/AndroidQ/20200605/202006051100/SDK'
+LOCAL_BRANCH = 'igarnet/vs680/AndroidQ/20200703/202006260015/SDK'
 #SYNA_BRANCH = 'debugithub/' + LOCAL_BRANCH
 #TCH_BRANCH = 'synaptics/' + LOCAL_BRANCH
-TCH_BRANCH = 'tch/synaptics-sdk/igarnet_vs680_AndroidQ_20200605_202006051100_SDK'
+TCH_BRANCH = 'tch/synaptics-sdk/igarnet_vs680_AndroidQ_20200703_202006260015_SDK'
 
-TAG = 'igarnet_20200605_SDK_Release'
+TAG = 'igarnet_20200703_SDK_Release'
 DO_DRY_RUN = False
 
 try:
