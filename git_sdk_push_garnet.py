@@ -57,6 +57,8 @@ repo_names = [
     ('syna-release/ampsdk/amp/src/ddl/acodec/codec/db_ms12', 'android/syna-release/ampsdk/amp/src/ddl/acodec/codec/db_ms12'),
     ('syna-release/ampsdk/build/configs/libdolbyms12', 'android/syna-release/ampsdk/build/configs/libdolbyms12'),
     ('syna-release/fw_enc/ms12', 'android/syna-release/fw_enc/ms12'),
+	('syna-release/ampsdk/amp/src/ddl/comp_dvs', 'android/syna-release/ampsdk/amp/src/ddl/comp_dvs'),
+	('syna-release/ta_enc/dv', 'android/syna-release/ta_enc/dv'),
 
     # OT
     ('android/device/synaptics/igarnet', 'android/aosp_mirror/device/synaptics/igarnet'),
